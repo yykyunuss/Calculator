@@ -61,10 +61,12 @@ public class SwingUIService extends JFrame{
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new GridLayout(3, 3, 5, 5));
         JLabel firstNum = new JLabel("İlk Sayı");
+        firstNum.setHorizontalAlignment(JLabel.CENTER);
         firstNum.setBounds(100, 100, 300, 30);
         firstNum.setFont(new Font("Arial", Font.BOLD, 30));
         
         JLabel secondNum = new JLabel("İkinci Sayı");
+        secondNum.setHorizontalAlignment(JLabel.CENTER);
         secondNum.setBounds(100, 100, 300, 30);
         secondNum.setFont(new Font("Arial", Font.BOLD, 30));
         
@@ -79,6 +81,7 @@ public class SwingUIService extends JFrame{
         secondInput.setFont(new Font("Arial", Font.PLAIN, 30));
      
         sonuc = new JLabel("Sonuç");
+        sonuc.setHorizontalAlignment(JLabel.CENTER);
         sonuc.setBounds(100, 100, 300, 30);
         sonuc.setFont(new Font("Arial", Font.BOLD, 30));
         
