@@ -130,11 +130,11 @@ public class SwingUIService extends JFrame{
 
     /**
      * checks whether the input is Turkish or English by looking at its first word.
-     * @param s is a number input in the screen.
+     * @param words is a number input in the screen.
      * @return true or false
      */
-    public boolean isEnglish(String s) { 
-    	String[] wordArray = s.split("\\s+");
+    public boolean isEnglish(String words) { 
+    	String[] wordArray = words.split("\\s+");
     	for(int i=0; i<wordArray.length; i++)
     		if(!englishNumbers.contains(wordArray[i]))
     			return false;
@@ -147,11 +147,11 @@ public class SwingUIService extends JFrame{
     
     /**
      * Error checking method.
-     * @param s is number input
+     * @param words is number input
      * @return true or false
      */
-    public boolean isInputValid(String s) {
-    	String[] wordArray = s.split("\\s+");
+    public boolean isInputValid(String words) {
+    	String[] wordArray = words.split("\\s+");
     	if(wordArray.length==0)
     		return false;
     	for(int i=0; i<wordArray.length; i++)
@@ -165,11 +165,11 @@ public class SwingUIService extends JFrame{
      * Helper method for ActionListener classes
      * If number input is English, we should check Turkish translations of words.
      * And we send Turkish translations to convertToNumber method
-     * @param input is number input
+     * @param words is number input
      * @return numeric value of the word.
      */
-    public BigInteger resultOfConversionToNumber(String input) {
-    	String[] wordArray = input.split("\\s+");	
+    public BigInteger resultOfConversionToNumber(String words) {
+    	String[] wordArray = words.split("\\s+");	
 		StringBuilder builder = new StringBuilder();
 		
 		for(int i=0; i<wordArray.length; i++)
